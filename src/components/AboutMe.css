@@ -1,0 +1,41 @@
+.about-me-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #add8e6; /* Light blue border */
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 900px; /* Adjust as needed */
+    margin: 0 auto; /* Center the component */
+  }
+  
+  .image-section {
+    width: 40%; /* Adjust as needed */
+    padding-right: 16px;
+  }
+  
+  .profile-image {
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .text-section {
+    width: 60%; /* Adjust as needed */
+  }
+  
+  .about-me-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .about-me-paragraph {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  

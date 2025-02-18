@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
+import { FaFacebook, FaReddit, FaTwitter, FaDiscord,  FaGithub, FaGit } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -12,17 +13,18 @@ const HeroSection = () => {
         </h1>
 
         <p>
-          I'm Sanjay. Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it to make a
-          specimen book.
+          I'm Sanjay.I'm Sanjay, a frontend web developer dedicated to bringing creative designs to life on the web. I specialize in HTML, CSS, and JavaScript, with a focus on React.js to build interactive and user-friendly interfaces. I'm always eager to learn and tackle new challenges in the ever-evolving world of web development.
+
+.
         </p>
 
         <div className="social-icons">
-          <a href="#" className="icon">📘</a>
-          <a href="#" className="icon">📷</a>
-          <a href="#" className="icon">🐦</a>
-          <a href="#" className="icon">🔗</a>
+        <div className="social-icons">
+            <button className="icon-btn"><FaFacebook /></button>
+            <button className="icon-btn"><FaReddit /></button>
+            <button className="icon-btn"><FaGithub /></button>
+            <button className="icon-btn"><FaDiscord /></button>
+          </div>
         </div>
       </div>
 
