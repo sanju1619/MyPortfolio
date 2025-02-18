@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <span className="icon">🅿️</span>
-        <span className="brand">Personal</span>
+        <span className="brand">Portfolio</span>
       </div>
 
       <ul className="nav-links">
