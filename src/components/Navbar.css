@@ -1,6 +1,9 @@
 /* Navbar container */
 .navbar {
+  
     display: flex;
+    position: sticky;
+    top: 0%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -12,6 +15,7 @@
   .logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   
   .icon {
@@ -39,6 +43,7 @@
     text-decoration: none;
     color: black;
     font-weight: 500;
+    cursor: pointer;
   }
   
   .nav-links a:hover {
