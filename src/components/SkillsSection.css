@@ -51,4 +51,26 @@
     background: black;
     color: white;
   }
-  
+  @media screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px; /* Adjust spacing */
+    }
+
+    .skills {
+        padding: 30px 20px; /* Reduce padding for better mobile fit */
+    }
+
+    .skill-card {
+        padding: 20px; /* Reduce padding for better spacing */
+    }
+
+    .skill-card img {
+        width: 40px; /* Slightly smaller images */
+        height: 40px;
+    }
+
+    .skill-card p {
+        font-size: 0.9rem;
+    }
+}

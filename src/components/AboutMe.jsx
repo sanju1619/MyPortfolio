@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutMe.css'; // Import the CSS file
-import AboutImage from "/assets/AboutImage.svg"; // Import the image
+import AboutImage from "/assets/Profile.jpeg"; // Import the image
 
 const AboutMe = () => {
   return (

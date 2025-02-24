@@ -1,69 +1,110 @@
 /* Hero Section Container */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px;
-    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: white;
+}
+
+/* Hero Text Content */
+.hero-content {
+  max-width: 600px;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Bold and Highlighted Text */
+.bold {
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: bold;
+  color: black;
+}
+
+.outline {
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+/* Hero Paragraph */
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Hero Image */
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* --------- Mobile Responsiveness --------- */
+@media screen and (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
   }
-  
-  /* Hero Text Content */
-  .hero-content {
-    max-width: 600px;
+
+  .hero-image {
+      order: -1; /* Moves the image to the top */
+      display: flex;
+      justify-content: center;
   }
-  
-  /* Hero Heading */
-  .hero-content h1 {
-    font-size: 3rem;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-  
-  /* Bold and Highlighted Text */
-  .bold {
-    font-weight: bold;
-  }
-  
-  .highlight {
-    font-weight: bold;
-    color: black;
-  }
-  
-  .outline {
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 0 5px;
-  }
-  
-  /* Hero Paragraph */
-  .hero-content p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  /* Social Media Icons */
-  .social-icons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .icon {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s ease;
-  }
-  
-  .icon:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Hero Image */
+
   .hero-image img {
-    max-width: 400px;
-    height: auto;
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px; /* Adds space below the image */
   }
-  
+
+  .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .hero-content h1 {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .hero-content p {
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
+  .social-icons {
+      justify-content: center;
+      gap: 10px;
+  }
+}

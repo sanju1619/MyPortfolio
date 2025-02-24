@@ -1,26 +1,37 @@
 import React from "react";
 import "./ContactSection.css";
 
-import { FaFacebook, FaReddit, FaTwitter, FaDiscord,  FaGithub, FaGit } from "react-icons/fa";
+import { FaFacebook, FaReddit, FaTwitter, FaDiscord,  FaGithub, FaGit,FaLinkedin } from "react-icons/fa";
 
 const ContactSection = () => {
+
+ const handleSumbit=(e)=>{
+  e.preventDefault()
+
+  alert("Response has been sent")
+
+
+  }
   return (
     <section className="contact-section">
       <div className="contact-container">
         {/* Left Side - Contact Form */}
         <div className="contact-form">
-          <input type="text" placeholder="Your name" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Your website (If exists)" />
-          <textarea placeholder="How can I help?*"></textarea>
-          <button className="contact-btn">Get In Touch</button>
 
+
+          <form onSubmit={handleSumbit}>
+
+            <input type="text" placeholder="Your name" required/>
+            <input type="email" placeholder="Email" required/>
+            <input type="text" placeholder="Your website (If exists)"  />
+            <textarea placeholder="How can I help?*" required></textarea>
+            <button className="contact-btn" type="submit">Get In Touch</button>
+
+          </form>
           {/* Social Icons */}
           <div className="social-icons">
-            <button className="icon-btn"><FaFacebook /></button>
-            <button className="icon-btn"><FaReddit /></button>
+            <a href="www.linkedin.com/in/sanjay-shankar16" target="blank"><button className="icon-btn"><FaLinkedin /></button></a>
             <button className="icon-btn"><FaGithub /></button>
-            <button className="icon-btn"><FaDiscord /></button>
           </div>
         </div>
 

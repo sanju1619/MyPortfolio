@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import "./Navbar.css"; // Import CSS file
+import "./Navbar.css";
+import Myresume from "./MyResume.pdf"
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      {/* Clicking Logo Scrolls to Hero Section */}
+      {/* Logo */}
       <div className="logo">
         <Link to="hero" smooth={true} duration={500} className="logo-link">
-          <span className="icon">🅿️</span>
-          <span className="brand">Portfolio</span>
+          <span className="brand">Sanjay S</span>
         </Link>
       </div>
 
+      {/* Hamburger Menu (Changes between ☰ and ✖) */}
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "✖" : "☰"}
+      </div>
+
       {/* Navbar Links */}
-      <ul className="nav-links">
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <Link to="about" smooth={true} duration={500}>About Me</Link>
+          <Link to="about" smooth={true} duration={500} onClick={() => setIsOpen(false)}>About Me</Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} duration={500}>Skills</Link>
+          <Link to="skills" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Skills</Link>
         </li>
         <li>
-          <Link to="projects" smooth={true} duration={500}>Projects</Link>
+          <Link to="projects" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Projects</Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={500}>Contact Me</Link>
+          <Link to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Contact Me</Link>
         </li>
+        
       </ul>
 
-      {/* Resume Download Button */}
-      <a style={{ textDecoration: "none" }} href="/MyResume.pdf" download="MyResume.pdf">
+      {/* Resume Button */}
+      <a style={{ textDecoration: "none" }} href={Myresume} download="MyResume.pdf">
         <button className="resume-btn">
           Resume <span className="download-icon">⬇️</span>
         </button>

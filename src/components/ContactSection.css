@@ -97,4 +97,48 @@
   .footer-right {
     font-size: 14px;
   }
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center-align content */
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .contact-form,
+    .contact-info {
+      width: 100%; /* Make them full width */
+      max-width: 400px; /* Limit max width for better spacing */
+      margin-bottom: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%; /* Full width inputs */
+      font-size: 14px; /* Slightly smaller for mobile */
+    }
+  
+    .contact-btn {
+      width: 100%; /* Full width button */
+      font-size: 16px;
+    }
+  
+    .social-icons {
+      justify-content: center; /* Center social icons */
+    }
+  
+    .contact-info h2 {
+      font-size: 24px; /* Adjust heading size */
+    }
+  
+    .contact-info p {
+      font-size: 14px;
+    }
+  
+    .contact-footer {
+      flex-direction: column; /* Stack footer items */
+      text-align: center;
+      padding: 10px;
+    }
+  }
   

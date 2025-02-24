@@ -1,7 +1,6 @@
 .about-me-container {
     display: flex;
     align-items: center;
-    border: 2px solid #add8e6; /* Light blue border */
     border-radius: 8px;
     padding: 16px;
     max-width: 900px; /* Adjust as needed */
@@ -38,4 +37,23 @@
     line-height: 1.6;
     margin-bottom: 1rem;
   }
-  
+  @media screen and (max-width: 768px) {
+    .about-me-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center-align text for better appearance */
+    }
+
+    .image-section {
+        width: 100%; /* Make image full width */
+        padding-right: 0;
+        margin-bottom: 16px; /* Add space between image and text */
+    }
+
+    .text-section {
+        width: 100%; /* Make text full width */
+    }
+
+    .about-me-title {
+        font-size: 2rem; /* Adjust title size for mobile */
+    }
+}

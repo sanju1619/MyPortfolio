@@ -1,73 +1,120 @@
 /* Navbar container */
 .navbar {
-  
-    display: flex;
-    position: sticky;
-    top: 0%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  font-size: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Button */
+.resume-btn {
+  background-color: black;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  opacity: 0.8;
+}
+
+.download-icon {
+  margin-left: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  /* Show Hamburger Menu in Mobile */
+  .hamburger {
+      display: block;
+      position: absolute;
+      right: 3px;
   }
-  
-  /* Logo */
-  .logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .icon {
-    font-size: 24px;
-    margin-right: 5px;
-  }
-  
-  .brand {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  /* Navigation links */
+
+  /* Hide Nav Links by Default on Mobile */
   .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
   }
-  
+
+  /* Show Nav Links When Menu is Open */
+  .nav-links.open {
+      display: flex;
+  }
+
   .nav-links li {
-    font-size: 16px;
+      padding: 10px;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Resume button */
+
+  /* Hide Resume Button in Mobile */
   .resume-btn {
-    background-color: black;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+      display: none;
   }
-  
-  .resume-btn:hover {
-    opacity: 0.8;
-  }
-  
-  .download-icon {
-    margin-left: 5px;
-  }
-  
+}
