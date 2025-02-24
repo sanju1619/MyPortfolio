@@ -1,6 +1,7 @@
 import React from "react";
 import "./HeroSection.css";
 import { FaFacebook, FaReddit, FaTwitter, FaDiscord,  FaGithub, FaGit ,FaLinkedin} from "react-icons/fa";
+import HeroImage from "/assets/Hero.svg"; // Import the image
 
 const HeroSection = () => {
   return (
@@ -28,7 +29,7 @@ const HeroSection = () => {
 
       <div className="hero-image">
         <img
-          src="/src/components/images/Frame 20.svg"
+          src={HeroImage}
           alt="Hero Illustration"
           height={886}
           width={596}
