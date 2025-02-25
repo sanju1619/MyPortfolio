@@ -18,17 +18,12 @@
   cursor: pointer;
 }
 
-.icon {
-  font-size: 24px;
-  margin-right: 5px;
-}
-
 .brand {
   font-size: 20px;
   font-weight: bold;
 }
 
-/* Hamburger Menu (Hidden by Default) */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 26px;
@@ -80,41 +75,55 @@
   margin-left: 5px;
 }
 
+/* Hide resume button inside nav-links for desktop view */
+.resume-mobile {
+  display: none;
+}
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
   /* Show Hamburger Menu in Mobile */
   .hamburger {
-      display: block;
-      position: absolute;
-      right: 3px;
+    display: block;
+    position: absolute;
+    right: 3px;
   }
 
   /* Hide Nav Links by Default on Mobile */
   .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
   }
 
   /* Show Nav Links When Menu is Open */
   .nav-links.open {
-      display: flex;
+    display: flex;
   }
 
   .nav-links li {
-      padding: 10px;
+    padding: 10px;
   }
 
-  /* Hide Resume Button in Mobile */
-  .resume-btn {
-      display: none;
+  /* Show Resume Button inside dropdown menu */
+  .resume-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+  }
+
+  /* Hide Resume Button in Desktop when in Mobile View */
+  .resume-desktop {
+    display: none;
   }
 }

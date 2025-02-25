@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
-import Myresume from "./MyResume.pdf"
+import Myresume from "./MyResume.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,11 +34,18 @@ const Navbar = () => {
         <li>
           <Link to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Contact Me</Link>
         </li>
-        
+        {/* Resume Button inside nav-links for mobile view */}
+        <li className="resume-mobile">
+          <a style={{ textDecoration: "none" }} href={Myresume} download="MyResume.pdf">
+            <button className="resume-btn">
+              Resume <span className="download-icon">⬇️</span>
+            </button>
+          </a>
+        </li>
       </ul>
 
-      {/* Resume Button */}
-      <a style={{ textDecoration: "none" }} href={Myresume} download="MyResume.pdf">
+      {/* Resume Button (Visible in desktop view) */}
+      <a className="resume-desktop" style={{ textDecoration: "none" }} href={Myresume} download="MyResume.pdf">
         <button className="resume-btn">
           Resume <span className="download-icon">⬇️</span>
         </button>

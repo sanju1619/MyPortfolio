@@ -30,8 +30,8 @@ const ContactSection = () => {
           </form>
           {/* Social Icons */}
           <div className="social-icons">
-            <a href="www.linkedin.com/in/sanjay-shankar16" target="blank"><button className="icon-btn"><FaLinkedin /></button></a>
-            <button className="icon-btn"><FaGithub /></button>
+          <a href="https://www.linkedin.com/in/sanjay-shankar16/" target="_blank"><button className="icon-btn"><FaLinkedin /></button></a>
+          <a  href="https://github.com/sanju1619" target="_blank"><button className="icon-btn"><FaGithub /></button></a>
           </div>
         </div>
 
